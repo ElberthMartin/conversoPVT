@@ -1,9 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CONVERTIDORPESOVOLUMENTEMPERATURA"
              x:Class="CONVERTIDORPESOVOLUMENTEMPERATURA.MainPage">
 
     <StackLayout>
+        <StackLayout BackgroundColor="#2196F3">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2196F3" Offset="0.0" />
+                    <GradientStop Color="#1976D2" Offset="1.0" />
+                </LinearGradientBrush>
+            </StackLayout.Background>
+        </StackLayout>
+
         <Label Text="Conversor de Unidades" FontSize="Title" HorizontalOptions="CenterAndExpand" Padding="10"/>
 
         <!-- Conversión de Peso: kg a lb -->
@@ -18,7 +29,11 @@
         <Button Text="Convertir a Galones" Clicked="ConvertirVolumen_Clicked"/>
         <Label x:Name="resultadoVolumenLabel" FontSize="Medium" Text="Resultado: " Padding="10"/>
 
-     
+        <!-- Conversión de Temperatura: °C a °F -->
+        <Label Text="Temperatura (°C)" FontSize="Medium"/>
+        <Entry x:Name="temperaturaEntry" Placeholder="Ingrese la temperatura en °C" Keyboard="Numeric"/>
+        <Button Text="Convertir a °F" Clicked="ConvertirTemperatura_Clicked"/>
+        <Label x:Name="resultadoTemperaturaLabel" FontSize="Medium" Text="Resultado: " Padding="10"/>
     </StackLayout>
 
 </ContentPage>

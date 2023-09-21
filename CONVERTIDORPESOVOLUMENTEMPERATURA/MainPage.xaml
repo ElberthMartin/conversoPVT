@@ -1,39 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CONVERTIDORPESOVOLUMENTEMPERATURA"
              x:Class="CONVERTIDORPESOVOLUMENTEMPERATURA.MainPage">
 
-    <StackLayout>
-        <StackLayout BackgroundColor="#2196F3">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#2196F3" Offset="0.0" />
-                    <GradientStop Color="#1976D2" Offset="1.0" />
-                </LinearGradientBrush>
-            </StackLayout.Background>
-        </StackLayout>
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#2196F3" Offset="0.0" />
+            <GradientStop Color="#1976D2" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
-        <Label Text="Conversor de Unidades" FontSize="Title" HorizontalOptions="CenterAndExpand" Padding="10"/>
+    <StackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="Conversor de Unidades" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" Padding="10" TextColor="White"/>
 
         <!-- Conversión de Peso: kg a lb -->
-        <Label Text="Peso (kg)" FontSize="Medium"/>
-        <Entry x:Name="pesoEntry" Placeholder="Ingrese el peso en kg" Keyboard="Numeric"/>
-        <Button Text="Convertir a Libras" Clicked="ConvertirPeso_Clicked"/>
-        <Label x:Name="resultadoPesoLabel" FontSize="Medium" Text="Resultado: " Padding="10"/>
+        <Label Text="Peso (kg)" FontSize="Medium" TextColor="White" HorizontalOptions="Center"/>
+        <Entry x:Name="pesoEntry" Placeholder="Ingrese el peso en kg" Keyboard="Numeric" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="160"/>
+        <Button Text="Convertir a Libras" Clicked="ConvertirPeso_Clicked" BackgroundColor="#FF5733" TextColor="White" WidthRequest="120" HeightRequest="60" CornerRadius="30" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoPesoLabel" FontSize="Medium" Text="Resultado: " Padding="10" TextColor="White" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoPeso" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
 
         <!-- Conversión de Volumen: litros a galones -->
-        <Label Text="Volumen (litros)" FontSize="Medium"/>
-        <Entry x:Name="volumenEntry" Placeholder="Ingrese el volumen en litros" Keyboard="Numeric"/>
-        <Button Text="Convertir a Galones" Clicked="ConvertirVolumen_Clicked"/>
-        <Label x:Name="resultadoVolumenLabel" FontSize="Medium" Text="Resultado: " Padding="10"/>
+        <Label Text="Volumen (litros)" FontSize="Medium" TextColor="White" HorizontalOptions="Center"/>
+        <Entry x:Name="volumenEntry" Placeholder="Ingrese el volumen en litros" Keyboard="Numeric" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="160"/>
+        <Button Text="Convertir a Galones" Clicked="ConvertirVolumen_Clicked" BackgroundColor="#33FF57" TextColor="White" WidthRequest="120" HeightRequest="60" CornerRadius="30" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoVolumenLabel" FontSize="Medium" Text="Resultado: " Padding="10" TextColor="White" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoVolumen" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
 
         <!-- Conversión de Temperatura: °C a °F -->
-        <Label Text="Temperatura (°C)" FontSize="Medium"/>
-        <Entry x:Name="temperaturaEntry" Placeholder="Ingrese la temperatura en °C" Keyboard="Numeric"/>
-        <Button Text="Convertir a °F" Clicked="ConvertirTemperatura_Clicked"/>
-        <Label x:Name="resultadoTemperaturaLabel" FontSize="Medium" Text="Resultado: " Padding="10"/>
+        <Label Text="Temperatura (°C)" FontSize="Medium" TextColor="White" HorizontalOptions="Center"/>
+        <Entry x:Name="temperaturaEntry" Placeholder="Ingrese la temperatura en °C" Keyboard="Numeric" BackgroundColor="White" TextColor="Black" HorizontalOptions="Center" WidthRequest="160"/>
+        <Button Text="Convertir a °F" Clicked="ConvertirTemperatura_Clicked" BackgroundColor="#5733FF" TextColor="White" WidthRequest="120" HeightRequest="60" CornerRadius="30" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoTemperaturaLabel" FontSize="Medium" Text="Resultado: " Padding="10" TextColor="White" HorizontalOptions="Center"/>
+        <Label x:Name="resultadoTemperatura" FontSize="Medium" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+
     </StackLayout>
 
 </ContentPage>
+
+
